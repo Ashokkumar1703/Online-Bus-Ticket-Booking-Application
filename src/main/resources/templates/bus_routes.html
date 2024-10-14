@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Available Bus Routes</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <div class="container mt-4">
+        <h2>Available Bus Routes</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Bus Route</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Seats Available</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="route : ${routes}">
+                    <td th:text="${route.name}">Route Name</td>
+                    <td th:text="${route.departureTime}">Departure Time</td>
+                    <td th:text="${route.arrivalTime}">Arrival Time</td>
+                    <td th:text="${route.seatsAvailable}">Seats Available</td>
+                    <td>
+                        <a th:href="@{/book(routeId=${route.id})}" class="btn btn-primary">Book Now</a> <!-- Ensure route ID is correct -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
