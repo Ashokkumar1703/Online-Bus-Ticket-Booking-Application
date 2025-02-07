@@ -2,6 +2,22 @@
 
 Building an online bus ticket booking application in India with Java Full stack project
 
+ProjectOverview:
+Developed a bus ticket booking application that allows users to search for bus schedules, book tickets, and view booking history. The application supports seat reservation, payment, and booking confirmation functionalities.
+
+Key Features:
+•	Ticket Booking: Users can view available buses based on destination, date, and time, and then reserve seats.
+•	Payment Integration: Added payment gateway simulation for ticket payment during the booking process.
+•	Booking History: Implemented a system for users to view their past bookings and cancel tickets.
+•	Backend Development: Developed REST APIs with Spring Boot for bus schedule management, booking, and payment services.
+•	Database Management: Designed and implemented PostgreSQL database to store bus schedules, user bookings, and payment details.
+•	Search & Filters: Added features to allow users to search and filter bus schedules by date, destination, and availability.
+•	Frontend Interface: Designed a user-friendly interface with HTML, CSS, and JavaScript, providing real-time updates of available seats and bus schedules.
+•	Testing: Ensured the correctness of the application by writing unit tests with JUnit to test backend functionalities like booking and payment processing.
+
+Technologies Used: Core Java, Spring Boot, Spring Framework, PostgreSQL, JUnit, HTML, CSS, JavaScript.
+
+
 Backend Development (Spring boot): 
 1.Create a new Spring Boot version 3.3.4 project 
 
